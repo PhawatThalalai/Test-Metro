@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex items-center justify-center min-h-screen">
+      <div class="w-full max-w-md mx-auto bg-blue-100 shadow-md rounded-lg p-6">
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">
+          แบบฟอร์มข้อมูลพนักงาน
+        </h2>
+        <form id="form">
+          <!-- ชื่อ -->
+          <div class="mb-4 flex flex-col">
+            <label class="block text-gray-700 font-medium mb-1" for="Name"
+              >ชื่อ</label
+            >
+            <input
+              type="text"
+              id="Name"
+              class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your name"
+            />
+            <span id="nameError" class="text-red-500 text-xs hidden mt-1">กรุณากรอกชื่อเป็นภาษาไทยหรือภาษาอังกฤษเท่านั้น และห้ามมีตัวเลขหรืออักขระพิเศษ</span>
+          </div>
+          <!-- เงินเดือน -->
+          <div class="mb-4 flex flex-col">
+            <label class="block text-gray-700 font-medium mb-1" for="salary"
+              >เงินเดือน</label
+            >
+            <input
+              type="text"
+              id="Salary"
+              class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your Salary"
+            />
+            <span id="salaryError" class="text-red-500 text-xs hidden mt-1">กรุณากรอกตัวเลขและอักขระพิเศษ ',' เท่านั้น ห้ามกรอกภาษาไทยและภาษาอังกฤษ</span>
+          </div>
+          <!-- อายุ -->
+          <div class="mb-4 flex flex-col">
+            <label class="block text-gray-700 font-medium mb-1" for="age"
+              >อายุ</label
+            >
+            <input
+              type="number"
+              id="Age"
+              class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your age"
+            />
+            <span id="ageError" class="text-red-500 text-xs hidden mt-1">กรุณากรอกอายุเป็นตัวเลขเท่านั้น และต้องไม่เกิน 2 ตัว</span>
+          </div>
+          <!-- อีเมล -->
+          <div class="mb-6 flex flex-col">
+            <label class="block text-gray-700 font-medium mb-1" for="email"
+              >อีเมล</label
+            >
+            <input
+              type="email"
+              id="Email"
+              class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your email"
+            />
+            <span id="emailError" class="text-red-500 text-xs hidden mt-1">กรุณากรอกemailให้ถูกต้องตาม format(ex. test@email.com)</span>
+          </div>
+
+          <!-- ปุ่มบันทึก -->
+          <button
+            type="submit"
+            class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            บันทึก
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
